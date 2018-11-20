@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import gameOfThronesHouses from './data.js'
+import House from './House.js'
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <h1>Game of Thrones Houses</h1>
+        <div className="text">
+          {
+            gameOfThronesHouses.map(house => (
+              <House
+                key={house.name}
+                name={house.name}
+                wikiSuffix={house.wikiSuffix}
+                people={house.people}
+              />
+            ))
+          }
+        </div>
+      </React.Fragment>
     );
   }
 }
