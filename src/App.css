@@ -26,6 +26,7 @@ h1, h3 {
 
 h1 {
   text-align: center;
+  color: #143D67;
 }
 
 .text {
@@ -37,4 +38,20 @@ h1 {
 
 .col {
   margin-top: 20px;
+}
+
+a {
+  color: #143D67;
+}
+
+.card-body a {
+  color: #007bff;
+}
+
+.card-body a:hover {
+  color: #007bff;
+}
+
+a:hover {
+  color: #5B202B;
 }
